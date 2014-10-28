@@ -1,0 +1,23 @@
+<h1>Edit :: <%= @user.name %></h1>
+
+<% if @user.errors.any? %>
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @user do |u| %>
+  <div class="form-group">
+    <%= u.label :name, "Username" %>
+    <%= u.text_field :name, placeholder: "Ex. bob", class: "form-control" %>
+  </div>
+  <div class="checkbox">
+    <%= u.label :visible do %>
+      <%= u.check_box :visible %> Visible
+    <% end %>
+  </div>
+
+  <%= u.submit "Edit user info!", class: "btn btn-default" %>
+<% end %>

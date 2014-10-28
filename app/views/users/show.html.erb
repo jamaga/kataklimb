@@ -1,0 +1,7 @@
+<h1><%= @user.name %></h1>
+
+<h2>Info</h2>
+
+<dl class="dl-horizontal">
+
+<%= button_to "DESTROY THIS USER", user_path(@user), method: :delete %>
