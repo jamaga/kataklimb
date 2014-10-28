@@ -1,17 +1,12 @@
 class UsersController < ApplicationController
 
-  rescue_from Pundit::NotAuthorizedError, with: :deny_access
-  include Pundit
-
-
-  
 	def index
 		page  = params[:page].to_i || 1
 		@users = User.order("id ASC").page(page)
 	end
 
 	def show
-    @user
+    @user = User.find(params[:id])
   end
 
   def destroy
@@ -45,9 +40,5 @@ class UsersController < ApplicationController
   def users_params
     params.require(:user).permit(:name)
   end
-
-  def deny_access
-    render text: "Your are not authorized to perform this action", status: :unauthorized
-  end
-
+  
 end

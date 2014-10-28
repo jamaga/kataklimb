@@ -11,9 +11,9 @@
 		<h1> KataKlimb - page to connect people who want to climb in Barcelona and around it  </h1>
 		<nav>
 			<ul>
-				<li> About</li>
+				<li> <%= link_to 'about' , about_path %> </li>
 				<li>Contact</li>
-				<li>Login</li>
+				<li><%= link_to 'login', login_path %></li>
 			</ul>
 		</nav>
 	</header>
@@ -21,31 +21,30 @@
 	<section class="middle">
 		<h2> Climb with other people in Barcelona </h2>
 		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque provident, eum ipsam similique laboriosam totam harum beatae. Nesciunt, qui, soluta eligendi sint odit a saepe. Dolorum pariatur labore excepturi veniam. </p>
-		<button> Get started! Register </button>
-
+		<%= link_to 'register here', register_path %>
 	</section>
 
 	<footer>
 			<article>
-				<h1> Safari bug warning! </h1>
+				<h1> find company to climb out of town </h1>
 				<p>
-				Most often,though, the extensions are used to release and test browser features that have been developed in the preparation ofW3C drafts that have not yet reached Candidate Recommendation status
+				find a pertner or group of people that would like to climb with you outisde of Barcelona 
 				</p>
-				<button>View details >> </button>
+				<button> go >> </button>
 			</article>
 			<article>
-				<h1> Heading </h1>
+				<h1> offer other people going with you </h1>
 				<p>
-				Most often,though, the extensions are used to release and test browser features that have been developed in the preparation ofW3C drafts that have not yet reached Candidate Recommendation status
+				if you go for a climbing trip and you have a free spot in your group or you have space in car left, offer it!
 				</p>
-				<button>View details >> </button>
+				<button> go >> </button>
 			</article>
 			<article>
-				<h1> Heading </h1>
+				<h1> tain in Barcelona </h1>
 				<p>
-					Most often,though, the extensions are used to release and test browser features that have been developed in the preparation ofW3C drafts that have not yet reached Candidate Recommendation status
+					if you want to begin training with other people in on of the climbing gyms in Barcelona or you want to just go with other people, just find them
 				</p>
-				<button>View details >> </button>
+				<button> go >> </button>
 			</article>
 	</footer>
 

@@ -1,5 +1,11 @@
 class LoginController < ApplicationController
 
+
+	def new
+		
+
+	end
+	
   def create
     user = User.where(email: params[:email]).first
 
@@ -17,10 +23,6 @@ class LoginController < ApplicationController
   def destroy
     session[:current_user_id] = nil
 
-    respond_to do |format|
-      format.html { redirect_to users_path }
-      format.js   { render js: "window.location.href='#{users_path}'" }
-    end
   end
 
 end

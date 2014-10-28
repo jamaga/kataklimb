@@ -3,11 +3,15 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+
+
   resources :users ,only: [:index, :show, :new, :create, :destroy]
 
   get  "/register", to: "registrations#new"
   post "/register", to: "registrations#create"
-
+  get "/about", to: "welcome#about" #it goes to welcome controller and uses amethod about
+#get about - says which name of route will be
+  get '/login', to: "login#new"
   post   "/login",  to: "login#create"
   delete "/logout", to: "login#destroy"
 
